@@ -21,7 +21,11 @@ public class LightboxConfig {
   public static var loadImage: (UIImageView, URL, ((UIImage?) -> Void)?) -> Void = { (imageView, imageURL, completion) in
 
     // Use Imaginary by default
-    imageView.setImage(url: imageURL, placeholder: nil, completion: { result in
+    var option = Option()
+    option.storageMaker = {
+        return nil
+    }
+    imageView.setImage(url: imageURL, placeholder: nil, option: option, completion: { result in
       switch result {
       case .value(let image):
         completion?(image)
