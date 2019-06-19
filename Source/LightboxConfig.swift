@@ -42,7 +42,7 @@ public class LightboxConfig {
   public static var preload = 0
 
   public struct PageIndicator {
-    public static var enabled = true
+    public static var enabled = false
     public static var separatorColor = UIColor(hex: "3D4757")
 
     public static var textAttributes: [NSAttributedString.Key: Any] = [
@@ -57,7 +57,7 @@ public class LightboxConfig {
   }
 
   public struct CloseButton {
-    public static var enabled = true
+    public static var enabled = false
     public static var size: CGSize?
     public static var text = NSLocalizedString("Close", comment: "")
     public static var image: UIImage?
@@ -91,7 +91,7 @@ public class LightboxConfig {
   }
 
   public struct InfoLabel {
-    public static var enabled = true
+    public static var enabled = false
     public static var textColor = UIColor.white
     public static var ellipsisText = NSLocalizedString("Show more", comment: "")
     public static var ellipsisColor = UIColor(hex: "899AB9")
